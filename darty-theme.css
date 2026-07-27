@@ -1,37 +1,188 @@
-:root {
-  --primary-color: #d12f13;
-  --primary-hover: #8b1e0c;
-  --bg-color: #f8f9fa;
-  --text-color: #212529;
-  --tile-bg: #ffffff;
-  --border-radius: 8px;
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
 }
 
-/* Background canvas */
-body, .lk-dashboard-container {
-  background-color: var(--bg-color) !important;
-  font-family: 'Open Sans', sans-serif !important;
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
 }
 
-/* Tile styling */
-.lk-tile {
-  background-color: var(--tile-bg) !important;
-  border-radius: var(--border-radius) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+#tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  z-index: 2;
 }
 
-/* Action Buttons */
-.btn-primary, button[type="submit"] {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  color: #ffffff !important;
+.tooltipTable {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
 }
 
-.btn-primary:hover {
-  background-color: var(--primary-hover) !important;
+.focus {
+  font-weight: bold;
 }
 
-/* Dashboard Headers & Titles */
-.dashboard-title, .tile-title {
-  color: var(--primary-hover) !important;
+.hidden {
+  display: none;
+}
+
+/* Hover updated to soft tint of brand red */
+.hover {
+  background-color: #fdeae8;
+}
+
+.reportTable {
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+  color: #212529;
+  border-collapse: collapse;
+  border-spacing: 3px;
+  table-layout: fixed;
+}
+
+/* Base header styles set to brand red #D12F13 */
+th.headerCell {
+  background-color: #D12F13;
+  color: white;
+  padding: 8px 5px;
+  border-bottom: 1px solid #BDC3C7;
+}
+
+.headerCell.dimension {
+  background-color: #D12F13;
+  border-right: 1px solid #e27563; 
+  color: white;
+}
+
+.headerCell.pivot {
+  background-color: #D12F13;
+  border-right: 1px solid #e27563; 
+  color: white;
+}
+
+.headerCell.measure {
+  background-color: #D12F13;
+  border-left: 1px solid #e27563; 
+  color: white;
+}
+
+.headerCell.measure.calculation {
+  background-color: #8B1E0C; /* Darker accent red for calculated measures */
+  border-left: 1px solid #e27563;
+  color: white;
+}
+
+.headerCell.transposed.dimension {
+  background-color: #D12F13;
+  color: white;
+}
+
+.headerCell.transposed.dimension.merged {
+  background-color: #D12F13 !important;
+  color: white;
+}
+
+.rowCell {
+  vertical-align: middle;
+  padding: 6px 5px;
+  border-bottom: 1px solid #EAEAEA; 
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed {
+  font-weight: bold;
+}
+
+/* Transposed index columns tuned to harmonious neutral warm tones */
+.indexCell.transposed.pivot {
+  background-color: #f5dedb;
+}
+
+.indexCell.transposed.dimension {
+  background-color: #f8f9fa;
+}
+
+.indexCell.transposed.measure {
+  background-color: #f0f0f0;
+}
+
+.indexCell.transposed.calculation {
+  background-color: #e8e8e8;
+}
+
+.indexCell.transposed.pivot.merged {
+  background-color: #f5dedb !important;
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: #f8f9fa !important;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #f0f0f0 !important;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #e8e8e8 !important;
+}
+
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: right;
+}
+
+.negative {
+  color: #D12F13;
+  font-weight: 600;
+}
+
+.estimate {
+  color: #8C8C8C !important;
+}
+
+.singleIndex {
+  padding-left: 15px !important;
+}
+
+.subtotal {
+  font-style: italic;
+  font-weight: bold;
+  background: #f8f9fa;
+  border-top: 1px solid #D12F13;
+}
+
+.total {
+  border-top: 2px solid #D12F13 !important;
+  font-weight: bold !important;
+  color: #212529;
+}
+
+.total.transposed {
+  border-top: 0px !important;
+  background: #f5dedb;
+}
+
+.rectElem.animated {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  margin: 4px;
 }
