@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #d12f13;
+  --primary-hover: #8b1e0c;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --tile-bg: #ffffff;
+  --border-radius: 8px;
+}
+
+/* Background canvas */
+body, .lk-dashboard-container {
+  background-color: var(--bg-color) !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Tile styling */
+.lk-tile {
+  background-color: var(--tile-bg) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Action Buttons */
+.btn-primary, button[type="submit"] {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+/* Dashboard Headers & Titles */
+.dashboard-title, .tile-title {
+  color: var(--primary-hover) !important;
+}
