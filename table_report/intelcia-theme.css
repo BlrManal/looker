@@ -41,9 +41,9 @@
   display: none;
 }
 
-/* Hover updated to soft tint of brand red */
+/* Hover state using soft Intelcia pink tint */
 .hover {
-  background-color: #fdeae8;
+  background-color: #fdf2f8;
 }
 
 .reportTable {
@@ -54,45 +54,46 @@
   table-layout: fixed;
 }
 
-/* Base header styles set to brand red #D12F13 */
+/* Base Header styling set to Intelcia Magenta (#D90077) */
 th.headerCell {
-  background-color: #D12F13;
+  background-color: #D90077;
   color: white;
   padding: 8px 5px;
-  border-bottom: 1px solid #BDC3C7;
+  border-bottom: 1px solid #3F0D60;
 }
 
 .headerCell.dimension {
-  background-color: #D12F13;
-  border-right: 1px solid #e27563; 
+  background-color: #D90077;
+  border-right: 1px solid #e25b9e; 
   color: white;
 }
 
 .headerCell.pivot {
-  background-color: #D12F13;
-  border-right: 1px solid #e27563; 
+  background-color: #D90077;
+  border-right: 1px solid #e25b9e; 
   color: white;
 }
 
 .headerCell.measure {
-  background-color: #D12F13;
-  border-left: 1px solid #e27563; 
+  background-color: #D90077;
+  border-left: 1px solid #e25b9e; 
   color: white;
 }
 
+/* Calculation headers use Intelcia Deep Plum (#3F0D60) for visual contrast */
 .headerCell.measure.calculation {
-  background-color: #8B1E0C; /* Darker accent red for calculated measures */
-  border-left: 1px solid #e27563;
+  background-color: #3F0D60;
+  border-left: 1px solid #e25b9e;
   color: white;
 }
 
 .headerCell.transposed.dimension {
-  background-color: #D12F13;
+  background-color: #D90077;
   color: white;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #D12F13 !important;
+  background-color: #D90077 !important;
   color: white;
 }
 
@@ -110,9 +111,9 @@ th.headerCell {
   font-weight: bold;
 }
 
-/* Transposed index columns tuned to harmonious neutral warm tones */
+/* Transposed index columns tuned to harmonious warm violet & rose tones */
 .indexCell.transposed.pivot {
-  background-color: #f5dedb;
+  background-color: #f7e6f0;
 }
 
 .indexCell.transposed.dimension {
@@ -128,7 +129,7 @@ th.headerCell {
 }
 
 .indexCell.transposed.pivot.merged {
-  background-color: #f5dedb !important;
+  background-color: #f7e6f0 !important;
 }
 
 .indexCell.transposed.dimension.merged {
@@ -152,7 +153,7 @@ th.headerCell {
 }
 
 .negative {
-  color: #D12F13;
+  color: #D90077;
   font-weight: 600;
 }
 
@@ -168,18 +169,18 @@ th.headerCell {
   font-style: italic;
   font-weight: bold;
   background: #f8f9fa;
-  border-top: 1px solid #D12F13;
+  border-top: 1px solid #D90077;
 }
 
 .total {
-  border-top: 2px solid #D12F13 !important;
+  border-top: 2px solid #D90077 !important;
   font-weight: bold !important;
   color: #212529;
 }
 
 .total.transposed {
   border-top: 0px !important;
-  background: #f5dedb;
+  background: #f7e6f0;
 }
 
 .rectElem.animated {
